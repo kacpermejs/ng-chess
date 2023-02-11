@@ -1,0 +1,35 @@
+.border table {
+  text-align: center;
+  vertical-align: central;
+}
+
+.board table {
+  margin: auto;
+  border-collapse: collapse;
+  height: 80vh;
+  width: 80vh;
+  border-width: 4px;
+  border-style: solid;
+  border-color: #683f2b;
+}
+
+.board td {
+  width: 12.5%;
+  height: 12.5%;
+  background-color: #b1633c;
+  padding: 0px;
+}
+
+.board tr:nth-child(odd) td:nth-child(odd),
+.board tr:nth-child(even) td:nth-child(even) {
+  background-color: #f9cd84;
+}
+
+.layout {
+  display: flex;
+  justify-content: center;
+}
+
+
+
+

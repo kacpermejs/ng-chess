@@ -1,0 +1,42 @@
+<div class="board">
+  <table>
+
+    <tbody>
+      <tr *ngFor="let rank of playingAsWhite ? ranks : ranks.slice().reverse()">
+        <td *ngFor="let square of playingAsWhite ? rank.squares : rank.squares.slice().reverse()">
+            <app-chess-board-square (clickHandlingRequest)="handleSquareClick($event)"
+                                    [showRankLabel]="playingAsWhite ? square.id == 0: square.id == 7"
+                                    [showFileLabel]="playingAsWhite ? rank.id == 7: rank.id == 0"
+                                    [square]="square"
+                                    [isSelectedPiece]="isSelectedPiece(square)"
+                                    ></app-chess-board-square><!--[isPossibleMove]="pieceHasBeenSelected() && isValidMovePositionForSelectedPiece(square)"-->
+        </td>
+      </tr>
+    </tbody>
+
+  </table>
+</div>
+
+<!-- file legend -->
+<!-- <tr *ngIf="playingAsWhite">
+  <th></th>
+  <th>A</th>
+  <th>B</th>
+  <th>C</th>
+  <th>D</th>
+  <th>E</th>
+  <th>F</th>
+  <th>G</th>
+  <th>H</th>
+</tr>
+<tr *ngIf="!playingAsWhite">
+  <th></th>
+  <th>H</th>
+  <th>G</th>
+  <th>F</th>
+  <th>E</th>
+  <th>D</th>
+  <th>C</th>
+  <th>B</th>
+  <th>A</th>
+</tr> -->

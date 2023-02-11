@@ -1,0 +1,30 @@
+
+<div
+  class="square"
+  [ngClass]="{selected: isSelectedPiece,
+              attackedPiece: hasPiece && isPossibleMove}"
+  (click)="onSquareClicked()">
+  <div class="coord rank-label">
+    <div *ngIf="showRankLabel">
+      {{square?.parentRank?.label}}
+    </div>
+  </div>
+  <div  class="piece-container">
+    <div class="marker-container" *ngIf="isPossibleMove && !hasPiece">
+      <div class="marker"></div>
+    </div>
+
+    <app-chess-piece
+      *ngIf="hasPiece"
+      pieceType="{{pieceName}}"
+      pieceColor="{{pieceColor}}">
+    </app-chess-piece>
+
+  </div>
+  <div class="coord file-label">
+    <div *ngIf="showFileLabel">
+      {{square?.label}}
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,2 @@
+C:\Users\kacpe\source\repos\Chess2.0\Chess\obj\Debug\Chess.esproj.SuggestedBindingRedirects.cache
+C:\Users\kacpe\source\repos\Chess2.0\Chess\obj\Debug\Chess.esproj.CoreCompileInputs.cache
